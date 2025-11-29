@@ -1,0 +1,170 @@
+<body>
+    <section class="hero" style="background: linear-gradient(135deg, var(--color-primary) 0%, #004d40 100%);">
+        <div class="container hero-content">
+            <h1>Stake Your Idea. Pitch for Equity.</h1>
+            <p>Submit your innovative idea, showcase your potential, and connect with investors ready to back your vision.</p>
+            <a href="#submission-form" class="btn btn-secondary" style="margin-top: 20px;">Submit Your Idea</a>
+        </div>
+    </section>
+
+    <section id="submission-form" class="submission-form" style="background-color: var(--color-white); padding: 80px 0;">
+        <div class="container" style="max-width: 900px;">
+            <h2 class="text-center text-primary">Innovative Proposal Submission</h2>
+
+            <div class="progress-bar-container">
+                <div id="progress-bar" class="progress-bar">Step 1 of 4</div>
+            </div>
+
+            <form id="equity-acquisition-form" enctype="multipart/form-data">
+
+                <div class="form-step" data-step="1">
+                    <h3 class="text-secondary">Step 1: Project Overview</h3>
+                    <div class="card" style="padding: 30px;">
+                        <div class="form-group">
+                            <label for="project-title">Project Title</label>
+                            <input type="text" id="project-title" name="project-title" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="short-description">Short Description (Max 500 chars)</label>
+                            <textarea id="short-description" name="short-description" rows="3" maxlength="500" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="category">Category/Industry</label>
+                            <select id="category" name="category" required>
+                                <option value="">Select Industry</option>
+                                <option>Fintech</option>
+                                <option>Health & Biotech</option>
+                                <option>SaaS</option>
+                                <option>Sustainable Tech</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="equity-offered">Equity Offered (%)</label>
+                            <input type="number" id="equity-offered" name="equity-offered" min="1" max="100" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="funding-requested">Funding Requested ($)</label>
+                            <input type="number" id="funding-requested" name="funding-requested" min="10000" step="1000" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="business-stage">Business Stage</label>
+                            <select id="business-stage" name="business-stage" required>
+                                <option>Idea</option>
+                                <option>Prototype</option>
+                                <option>MVP (Minimum Viable Product)</option>
+                                <option>Scaling</option>
+                            </select>
+                        </div>
+                        <button type="button" class="btn btn-primary btn-next">Next: Uploads</button>
+                    </div>
+                </div>
+
+                <div class="form-step" data-step="2" style="display: none;">
+                    <h3 class="text-secondary">Step 2: Documentation & Uploads</h3>
+                    <div class="card" style="padding: 30px;">
+                        <p style="margin-bottom: 20px;">Please upload the necessary documents. Max file size 10MB per file.</p>
+                        <div class="form-group">
+                            <label for="pitch-deck">Business Plan or Pitch Deck (*.pdf, *.pptx) - Required</label>
+                            <input type="file" id="pitch-deck" name="pitch-deck" accept=".pdf,.pptx" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="market-analysis">Market Analysis (Upload or Text)</label>
+                            <input type="file" id="market-analysis" name="market-analysis" accept=".pdf,.docx">
+                            <textarea name="market-analysis-text" rows="3" placeholder="Alternatively, paste a brief market summary..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="financials">Projected Financials (*.xlsx, *.pdf) - Required</label>
+                            <input type="file" id="financials" name="financials" accept=".xlsx,.pdf" required>
+                        </div>
+                        <button type="button" class="btn btn-secondary btn-prev">Previous</button>
+                        <button type="button" class="btn btn-primary btn-next" style="margin-left: 10px;">Next: Contact</button>
+                    </div>
+                </div>
+
+                <div class="form-step" data-step="3" style="display: none;">
+                    <h3 class="text-secondary">Step 3: Contact Information</h3>
+                    <div class="card" style="padding: 30px;">
+                        <div class="form-group">
+                            <label for="full-name">Full Name</label>
+                            <input type="text" id="full-name" name="full-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">Email</label>
+                            <input type="email" id="contact-email" name="contact-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="linkedin">LinkedIn Profile URL</label>
+                            <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/...">
+                        </div>
+                        <div class="form-group">
+                            <label for="website">Project Website (Optional)</label>
+                            <input type="url" id="website" name="website" placeholder="https://www.yourproject.com">
+                        </div>
+                        <button type="button" class="btn btn-secondary btn-prev">Previous</button>
+                        <button type="button" class="btn btn-primary btn-next" style="margin-left: 10px;">Next: Final Review</button>
+                    </div>
+                </div>
+
+                <div class="form-step" data-step="4" style="display: none;">
+                    <h3 class="text-secondary">Step 4: Terms and Conditions</h3>
+                    <div class="card" style="padding: 30px;">
+                        <p style="margin-bottom: 20px;">Before finalizing your submission, please read and agree to the terms.</p>
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="terms-agree" name="terms-agree" required>
+                            <label for="terms-agree">I agree to the <a href="#">Equity Acquisition Program Terms and Conditions</a>, including the non-disclosure agreement policy.</label>
+                        </div>
+                        <button type="button" class="btn btn-secondary btn-prev">Previous</button>
+                        <button type="submit" class="btn btn-accent btn-submit" style="margin-left: 10px;">Submit Proposal</button>
+                    </div>
+                </div>
+            </form>
+
+            <div id="submission-confirmation" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 101; align-items: center; justify-content: center;">
+                <div class="card" style="padding: 40px; max-width: 500px; text-align: center;">
+                    <h2 class="text-secondary">🎉 Submission Successful!</h2>
+                    <p>Thanks for submitting! Your proposal ID is **<span id="confirmation-id" class="text-gold">RV-XXXX</span>**.</p>
+                    <p>We’ll review and send an email update within 7–14 business days.</p>
+                    <button class="btn btn-primary" onclick="document.getElementById('submission-confirmation').style.display='none'; showStep(1);">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="review-visibility">
+        <div class="container" style="display: flex; gap: 40px; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 300px;">
+                <h3 class="text-primary">Bring Your Idea to Life: Video Pitch</h3>
+                <p>An optional video pitch significantly boosts your proposal's visibility.</p>
+                <form>
+                    <div class="form-group">
+                        <label for="video-link">Embedded Link (YouTube/Vimeo)</label>
+                        <input type="url" id="video-link" placeholder="https://youtu.be/...">
+                    </div>
+                    <p style="font-weight: bold; margin-top: 15px;">Checklist:</p>
+                    <ul>
+                        <li>Introduce yourself/team.</li>
+                        <li>Explain the problem you solve.</li>
+                        <li>Show the solution/product.</li>
+                        <li>State what you’re asking for.</li>
+                    </ul>
+                </form>
+            </div>
+            <div style="flex: 1; min-width: 300px;">
+                <h3 class="text-primary">Review & Visibility</h3>
+                <p>Your proposal moves through a four-stage review process.</p>
+                <div style="margin-top: 20px;">
+                    <div style="font-weight: bold; margin-bottom: 5px; color: var(--color-secondary);">✅ Submitted</div>
+                    <div style="margin-bottom: 5px;">⏳ Under Review</div>
+                    <div style="margin-bottom: 5px;">☐ Shortlisted</div>
+                    <div style="margin-bottom: 20px;">☐ Accepted</div>
+                </div>
+                <h4 class="text-accent">Visibility Options:</h4>
+                <p style="font-size: 0.95rem;">**Private submission** (default) ensures confidentiality. You can opt for **Public listing** if approved to gain wider investor interest.</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="src/js/main.js"></script>
+</body>
+</html>

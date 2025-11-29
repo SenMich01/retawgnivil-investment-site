@@ -1,0 +1,134 @@
+<body>
+    <section class="hero" style="background: linear-gradient(135deg, var(--color-primary) 0%, #0a4f32 100%);">
+        <div class="container hero-content">
+            <h1>Save with Confidence.</h1>
+            <p>High-security savings plans designed to protect and grow your capital with ease.</p>
+        </div>
+    </section>
+
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>How It Works: 3 Simple Steps</h2>
+            </div>
+            <div class="card-grid cols-3">
+                <div class="card text-center">
+                    
+
+[Image of an account setup icon]
+
+                    <h3>1. Choose Your Plan</h3>
+                    <p>Select a flexible savings plan that matches your financial goals and deposit frequency.</p>
+                </div>
+                <div class="card text-center">
+                    
+                    <h3>2. Secure Deposit</h3>
+                    <p>Make an instant deposit using our Stripe-powered payment gateway. Your funds are protected.</p>
+                </div>
+                <div class="card text-center">
+                    
+
+[Image of a growth chart icon]
+
+                    <h3>3. Watch It Grow</h3>
+                    <p>Track your balance, view transaction history, and request withdrawals anytime.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="save-module" style="background-color: var(--color-white); padding: 80px 0;">
+        <div class="container" style="display: flex; gap: 40px; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 300px;">
+                <h2 class="text-secondary">Start Saving Today</h2>
+                <p>Define your savings plan, set your deposit amount, and begin your journey to financial security. All deposits are verified instantly.</p>
+                <div class="security-panel" style="margin-top: 20px; padding: 20px; border: 1px solid var(--color-gold); border-radius: 8px;">
+                    <h4 class="text-primary">🔒 Security Compliance</h4>
+                    <p style="font-size: 0.9rem;">We use **tokenized payment processing** and adhere to global **WCAG AA accessibility** standards. Funds are held in audited trust accounts.</p>
+                </div>
+            </div>
+            <div class="card" style="flex: 1; min-width: 300px;">
+                <h3 class="text-accent">Savings Plan Form</h3>
+                <form class="payment-form">
+                    <input type="hidden" name="purpose" value="deposit">
+                    <div class="form-group">
+                        <label for="plan-name">Plan Name (e.g., 'Retirement Fund')</label>
+                        <input type="text" id="plan-name" name="plan-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="amount">Deposit Amount ($)</label>
+                        <input type="number" id="amount" name="amount" min="10" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="frequency">Deposit Frequency</label>
+                        <select id="frequency" name="frequency" required>
+                            <option value="once">One-Time Deposit</option>
+                            <option value="monthly">Monthly Auto-Deposit</option>
+                            <option value="weekly">Weekly Auto-Deposit</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit" style="width: 100%;">Deposit Now →</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="transactions">
+        <div class="container">
+            <h2 class="text-center">Account Management</h2>
+            <div style="display: flex; gap: 40px; margin-top: 40px; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 300px;">
+                    <h3 class="text-accent">Request Withdrawal</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="withdraw-amount">Amount ($)</label>
+                            <input type="number" id="withdraw-amount" min="1" step="0.01" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="payout-method">Payout Method</label>
+                            <select id="payout-method" required>
+                                <option>Bank Transfer (ACH/SEPA)</option>
+                                <option>Cryptocurrency Wallet</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="note">Optional Note</label>
+                            <textarea id="note"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-secondary">Request Withdrawal</button>
+                    </form>
+                    <div style="margin-top: 20px;">
+                        <h4 class="text-primary">Withdrawal Status Tracker:</h4>
+                        <p>Latest Request: $500.00 | Status: <span style="color: var(--color-gold); font-weight: bold;">Pending</span> → Approved → Paid</p>
+                    </div>
+                </div>
+
+                <div class="card" style="flex: 1; min-width: 300px;">
+                    <h3 class="text-secondary">Transaction History (Placeholder)</h3>
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <thead>
+                            <tr style="border-bottom: 2px solid #ccc;">
+                                <th style="text-align: left; padding: 10px 0;">Date</th>
+                                <th style="text-align: left; padding: 10px 0;">Type</th>
+                                <th style="text-align: right; padding: 10px 0;">Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td style="padding: 8px 0;">2025-10-01</td><td style="padding: 8px 0; color: var(--color-secondary);">Deposit</td><td style="text-align: right; padding: 8px 0;">+ $1,000.00</td></tr>
+                            <tr><td style="padding: 8px 0;">2025-11-01</td><td style="padding: 8px 0; color: var(--color-secondary);">Deposit</td><td style="text-align: right; padding: 8px 0;">+ $1,000.00</td></tr>
+                            <tr><td style="padding: 8px 0;">2025-11-15</td><td style="padding: 8px 0; color: var(--color-accent);">Withdrawal</td><td style="text-align: right; padding: 8px 0;">- $500.00</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="src/js/main.js"></script>
+</body>
+</html>

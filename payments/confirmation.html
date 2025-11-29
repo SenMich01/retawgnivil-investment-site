@@ -1,0 +1,22 @@
+<body>
+    <section class="hero" style="min-height: 60vh; background: linear-gradient(135deg, var(--color-primary) 0%, #046A38 100%);">
+        <div class="container hero-content">
+            <h1>Transaction Status</h1>
+            <p>We are currently verifying your payment. Please wait...</p>
+        </div>
+    </section>
+
+    <section class="confirmation-details">
+        <div class="container" style="max-width: 700px; text-align: center; padding: 60px 0;">
+            <div class="card" id="confirmation-status" style="padding: 40px;">
+                <p class="text-gold">⏳ Verifying payment status...</p>
+                <p style="font-size: 0.9rem; margin-top: 15px;">Do not refresh this page. Verification is proceeding via Netlify Function call.</p>
+            </div>
+            <a href="index.html" class="btn btn-primary" style="margin-top: 30px;">Return to Home</a>
+        </div>
+    </section>
+
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="../src/js/main.js"></script>
+</body>
+</html>

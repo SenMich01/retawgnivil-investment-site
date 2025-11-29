@@ -1,0 +1,21 @@
+{
+    "tableName": "equity_proposals",
+    "fields": [
+        {"name": "proposal_id", "type": "TEXT", "description": "Unique ID for the proposal (e.g., RV-0001)"},
+        {"name": "project_title", "type": "TEXT", "required": true},
+        {"name": "short_description", "type": "TEXT", "required": true},
+        {"name": "category", "type": "TEXT"},
+        {"name": "equity_offered_percent", "type": "NUMERIC"},
+        {"name": "funding_requested_usd", "type": "NUMERIC"},
+        {"name": "business_stage", "type": "TEXT"},
+        {"name": "full_name", "type": "TEXT", "required": true},
+        {"name": "contact_email", "type": "TEXT", "required": true},
+        {"name": "linkedin_url", "type": "TEXT"},
+        {"name": "project_website", "type": "TEXT"},
+        {"name": "terms_agreed", "type": "BOOLEAN"},
+        {"name": "submission_date", "type": "TIMESTAMP", "default": "now()"},
+        {"name": "review_status", "type": "TEXT", "default": "Submitted"},
+        {"name": "file_pitch_deck_url", "type": "TEXT", "description": "Signed URL to stored file"},
+        {"name": "file_financials_url", "type": "TEXT", "description": "Signed URL to stored file"}
+    ]
+}
